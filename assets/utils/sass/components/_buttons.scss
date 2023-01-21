@@ -1,0 +1,15 @@
+.input-serch--city{
+ @include size(30%,50px,10px 0 0 10px);
+ min-width: 200px;
+ @include flex(column,center,center);
+ font-size: 2rem;
+ padding-left: 30px;
+}
+
+.button-serch--city{
+ @include size(50px,50px,0 10px 10px 0);
+ background-color: color("blueGreen");
+ img{
+  width: 20px;
+ }
+}

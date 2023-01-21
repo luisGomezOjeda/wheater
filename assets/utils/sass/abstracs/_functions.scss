@@ -1,0 +1,3 @@
+@function color($keycolor){
+ @return map-get($map: $palettePrimary,$key:$keycolor);
+}

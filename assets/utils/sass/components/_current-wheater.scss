@@ -1,0 +1,45 @@
+.section-serch--city{
+  @include flex(row,center,center);
+}
+.section--current-wheater{
+  @include size(100%,100%,20px);
+  @include flex(column,space-evenly,center);
+  @include media-down("md"){
+    place-self: center;
+    @include size(60%,80%,20px);
+    min-width: 310px;
+ }
+
+ .current-wheater--temp{
+  height: 40%;
+   @include flex(column,space-around,center);
+   
+   @include media-down("md"){
+     @include flex(row,space-around,center);
+   }
+    h4{
+    @include font(8rem,bold,4rem,color("while"));
+    letter-spacing: 2px;
+    @include media-down("md"){
+      @include font(5rem,600,4rem,color("while"));
+    }
+   }
+   img{
+    width: 250px;
+    height: 250px;
+    @include media-down("md"){
+      width: 150px;
+    height: 150px;
+    }
+   }
+  }
+  .current-wheater--description{
+   p{
+    @include font(2.5rem,300,4rem,color("while"));
+    letter-spacing: 2px;
+    @include media-down("md"){
+      @include font(3rem,300,4rem,color("while"));
+    }
+   }
+  }
+ }

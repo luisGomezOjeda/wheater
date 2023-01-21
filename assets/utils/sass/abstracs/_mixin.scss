@@ -1,0 +1,25 @@
+@mixin size($w,$h,$br){
+ width: $w;
+ height: $h;
+ border-radius: $br;
+}
+
+  @mixin flex($direction,$justify,$align){
+    display: flex;
+    flex-direction: $direction;
+ align-items: $align;
+ justify-content: $justify;
+}
+
+@mixin  font($s,$fw,$lh,$c){
+ font-size: $s;
+ font-weight: $fw;
+ line-height: $lh;
+ color: $c;
+}
+
+@mixin media-down($width){
+ @media (max-width:map-get($map: $breakPoint,$key:$width)){
+   @content;
+ }
+}

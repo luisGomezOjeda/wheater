@@ -1,0 +1,47 @@
+main{
+ display: grid;
+ place-items: center;
+ @include media-down("md"){
+  width: 100%;
+  height: 100%;
+ }
+}
+
+.main-content{
+ width: 95%;
+ height: 80%;
+ display: grid;
+ justify-content: center;
+ grid-template-columns: 75% 25%;
+ grid-template-rows: 20% 80%;
+ 
+ @include media-down("md"){
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 3fr;
+ }
+}
+
+.section-serch--city{
+ grid-column: 1/3;
+ @include media-down("md"){
+  grid-column: 1/2;
+  grid-row: 1/2;
+ }
+}
+
+.section--current-wheater{
+ grid-area: 2/2/2/3;
+ @include media-down("md"){
+  grid-column: 1/2;
+  grid-row: 2/3;
+ }
+}
+
+.section-current--wheater-data{
+ @include media-down("md"){
+  grid-column: 1/2;
+  grid-row: 3/4;
+ }
+}

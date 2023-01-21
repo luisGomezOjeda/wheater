@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- style -->
+ <link rel="stylesheet" href="./assets/utils/css/index.css">
+ <!-- font family -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;500;700&display=swap" rel="stylesheet">
+ <title>wheater</title>
+</head>
+<body>
+ <main>
+  <section class="main-content">
+   <section class="section-serch--city">
+     <input type="text" class="input-serch--city" placeholder="serch city">
+     <button class="button-serch--city"><img src="./assets/images/icons8-búsqueda-30.png"></button>
+    </section>
+    <section class="section--current-wheater card"> 
+    <div class="current-wheater--temp">
+      <img src="./assets/images/load.webp" alt="" class="current--wheater-img" id="img-current-wheater">
+     <h4 id="current-temp">...°</h4> 
+    </div>
+    <div class="current-wheater--description">
+     <p id ="wheater-description">loader...</p>
+    </div>
+   </section>
+   <section class="section-current--wheater-data">
+    <div class="card section-data">
+     <h2 id ="city">loader...</h2>
+     <div class="section-cards-info">
+       <figure class="card-info">
+        <img src="./assets/images/data-humedad.png" alt="">
+        <figcaption id ="humidity">...%</figcaption>
+       </figure>
+      <figure class="card-info">
+       <img src="./assets/images/data-viento.png" alt="">
+       <figcaption id ="wind">...m/s</figcaption>
+      </figure>
+      <figure class="card-info">
+       <img src="./assets/images/icons8-termómetro-médico-64.png" alt="">
+       <figcaption id="wheater-like">...°</figcaption>
+      </figure>
+      <figure class="card-info">
+       <img src="./assets/images/icons8-nubes-64.png" alt="">
+       <figcaption id ="clouds">...%</figcaption>
+      </figure>
+     </div>
+    </div>
+    <div class=" section--min-max">
+
+     <figure class="card card-min">
+      <img src="./assets/images/load.webp" alt="" id="img-current-wheater">
+      <p id = "wheater-min">...°</p>
+     </figure>
+
+     <figure class="card card-max">
+      <img src="./assets/images/load.webp" alt="" id="img-current-wheater">
+      <p id ="wheater-max">...°</p>
+     </figure>
+
+    </div>
+
+   </section>
+  </section>
+ </main>
+</body>
+
+<script src="./assets/scripts/index.js" type="module"></script>
+</body>
+</html>
