@@ -27,6 +27,7 @@
    img{
     width: 250px;
     height: 250px;
+    object-fit: contain;
     @include media-down("md"){
       width: 150px;
     height: 150px;

@@ -11,20 +11,17 @@ $clouds = document.getElementById("clouds");
 console.log($wheaterDescription);
 
 let idCity;
-export async function getCurrentWheater(currentCity,APIkey){
+export async function getCurrentWheater(currentCity,APIkey,suceess = undefined){
   try{
-    let resCities = await fetch("./assets/city.list.json"),
-    jsonCities = await resCities.json(),
+    let resCities = await fetch("./assets/city.list.json");
+    const jsonCities = await resCities.json(),
     cities = jsonCities.filter(item => item.name === currentCity);
+    if(cities.length === 0) throw {status : resCities.status , message : "La ciudad que solicito no existe o no esta disponible"};
     idCity = cities[0];
-
     
-    let resWheater = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${idCity.coord.lat}&lon=${idCity.coord.lon}&appid=${APIkey}&units=metric`),
-    jsonWheater = await resWheater.json();
-    
-    if(jsonWheater.cod !== 200) throw {status : jsonWheater.cod , message : jsonWheater.message}
-    
-    console.log(jsonWheater.weather[0].description);
+    let resWheater = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${idCity.coord.lat}&lon=${idCity.coord.lon}&appid=${APIkey}&units=metric`);
+    if(resWheater.status !== 200) throw {status : resWheater.status , message : "error : no se pudo encontrar la ciudad"}
+    const jsonWheater = await resWheater.json();
     
     $city.innerHTML = `${jsonWheater.name}`;
     $humidity.innerHTML = `${jsonWheater.main.humidity}%`
@@ -39,8 +36,11 @@ export async function getCurrentWheater(currentCity,APIkey){
     $currentTemp.innerHTML =`${Math.floor(jsonWheater.main.temp)}°`;
     $wheaterDescription.innerHTML = `${jsonWheater.weather[0].description}`;
 
-
+    if(suceess !== undefined)suceess.status = true;
   }catch(err){
-    console.log(err);
+    swal.fire({
+      title: `Error :${err.status}`,
+      text : `${err.message}`
+    });
   }
 }

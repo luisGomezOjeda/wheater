@@ -22,9 +22,9 @@
     margin-top:0;
    }
    @include media-down("sm"){
-    @include font(3rem,500,4rem,color("while"));
+    @include font(2rem,600,3rem,color("while"));
     margin-top:0;
-   }
+  }
   }
 
   .section-cards-info{
@@ -38,9 +38,13 @@
    figcaption{
     @include font(3.5rem,300,2rem,color("while"));
     margin-top: 20px;
+    @include media-down("sm"){
+     @include font(2rem,300,2rem,color("while"));
+   }
    }
    img{
     @include size(80px,80px,0);
+    object-fit: contain;
     @include media-down("md"){
      @include size(40px,40px,0);
     }
@@ -58,8 +62,6 @@
    @include flex(row,space-evenly,center);
    @include size(48.5%,90%,20px);
    margin-top: auto;
-   @include media-down("md"){
-   }
   }
 
   
@@ -68,10 +70,14 @@
    letter-spacing: 2px;
    @include media-down("sm"){
     @include font(3.5rem,300,2rem,color("while"));
+    @include media-down("sm"){
+     @include font(3rem,300,2rem,color("while"));
+    };
    }
    
    img{
     @include size(250px,200px,0); 
+    object-fit: contain;
     @include media-down("md"){
      @include size(150px,100px,0); 
     }
