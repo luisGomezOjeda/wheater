@@ -1,5 +1,19 @@
 main{
- width: 100%;
- height: 100vh;
+ @include size(100%,100vh,0);
  background: linear-gradient(90deg, color("blueGreen"),color("blueLigth"),color("blueLigth"),color("blueGreen"));
+ background: {
+  size: cover;
+  position: center;
+  repeat: no-repeat;
+ }
+
+ 
+ &.nigth{
+  background-color: none;
+  background-image: url("../../images/night.jpg");
+ }
+ &.day{
+  background-color: none;
+  background-image: url("../../images/day.jpg"); 
+ }
 }

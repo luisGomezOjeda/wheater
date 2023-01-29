@@ -1,0 +1,21 @@
+.swal2-popup{
+ min-width: 400px;
+ min-height: 200px;
+ @include media-down("sm"){
+  min-width: 300px;
+ }
+ h2{
+  @include font(2rem,bolder,3rem,#0039a3);
+ }
+ p{
+  @include font(1.8rem,500,3rem,#000);
+ }
+ h4{
+  @include font(1.8rem,500,3rem,#000);
+ }
+ 
+ .swal2-confirm{
+  min-width: 100px;
+  @include font(1.6rem,bold,2rem,#fff);
+ }
+}
