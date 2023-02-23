@@ -1,6 +1,7 @@
 main{
  @include size(100%,100vh,0);
  background: linear-gradient(90deg, color("blueGreen"),color("blueLigth"),color("blueLigth"),color("blueGreen"));
+ background-image: url("../../images/pexels-photo-296234.webp"); 
  background: {
   size: cover;
   position: center;
