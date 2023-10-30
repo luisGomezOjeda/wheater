@@ -4,7 +4,7 @@ import {getCity,setCity} from "./localStorage.js";
 import {dinamic_bg} from "./dynamic_bg.js";
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('../sw.js')
+  navigator.serviceWorker.register('../../sw.js')
 }
 
 document.addEventListener("DOMContentLoaded",(e)=>{
