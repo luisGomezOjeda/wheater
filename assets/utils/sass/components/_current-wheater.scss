@@ -11,7 +11,7 @@
  }
 
  .current-wheater--temp{
-  height: 40%;
+  height: 80%;
    @include flex(column,space-around,center);
    
    @include media-down("md"){

@@ -4,7 +4,7 @@
   "description": "wheater description",
   "main": "index.js",
   "scripts": {
-    "sass" : "sass --watch ./assets/utils/sass/index.scss ./assets/utils/css/index.css"
+    "sass": "sass --watch ./assets/utils/sass/index.scss ./assets/utils/css/index.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/luisGomezOjeda/wheater/issues"
   },
-  "homepage": "https://github.com/luisGomezOjeda/wheater#readme"
+  "homepage": "https://github.com/luisGomezOjeda/wheater#readme",
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
 }

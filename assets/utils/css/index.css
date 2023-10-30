@@ -7,7 +7,8 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
 }
 
 html {
@@ -72,8 +73,9 @@ main {
 
 main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   border-radius: 0;
+  min-height: 100vh;
   background: linear-gradient(90deg, rgba(0, 57, 163, 0.7450980392), #6b9fff, #6b9fff, rgba(0, 57, 163, 0.7450980392));
   background-image: url("../../images/pexels-photo-296234.webp");
   background-size: cover;
@@ -90,7 +92,7 @@ main.day {
 }
 
 .card {
-  background: rgba(0, 57, 163, 0.2745098039);
+  background: hsla(219, 100%, 32%, 0.275);
   backdrop-filter: blur(120px);
 }
 
@@ -120,7 +122,7 @@ main.day {
   }
 }
 .section--current-wheater .current-wheater--temp {
-  height: 40%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
