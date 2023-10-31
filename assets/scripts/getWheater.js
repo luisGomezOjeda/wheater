@@ -25,11 +25,12 @@ export async function getCurrentWheater(currentCity,APIkey,fun_bg,fun_LocalCity 
     $currentTemp.innerHTML =`...°`;
     $wheaterDescription.innerHTML = `loader...`;
 
-    let resCities = await fetch("./assets/city.list.json");
+    let resCities = await fetch("../../city.list.json");
     const jsonCities = await resCities.json(),
     cities = jsonCities.filter(item => item.name === currentCity);
     if(cities.length === 0) throw {status : "no encontrado" , message : "La ciudad que solicito no existe o no esta disponible",h4 : "(asegurese de escribir las iniciales con mayuscula)"}
     idCity = cities[0];
+
     
     let resWheater = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${idCity.coord.lat}&lon=${idCity.coord.lon}&appid=${APIkey}&units=metric`);
 

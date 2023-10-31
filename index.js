@@ -3,6 +3,7 @@ import {getCurrentWheater} from "./assets/scripts/getWheater.js";
 import {getCity,setCity} from "./assets/scripts/localStorage.js";
 import {dinamic_bg} from "./assets/scripts/dynamic_bg.js";
 
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register("./sw.js")
 }
