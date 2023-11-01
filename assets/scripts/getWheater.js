@@ -15,7 +15,7 @@ export async function getCurrentWheater(currentCity,APIkey,fun_bg,fun_LocalCity 
     $city.innerHTML = `loader...`;
     $humidity.innerHTML = `...%`
     $imgCurrentWheater.forEach(img => img.src = `./assets/images/load.webp`);
-    $wind.innerHTML = `...m/s`;
+    $wind.innerHTML = `...km/h`;
     $wheaterLike.innerHTML = `...°`;
     $clouds.innerHTML = `...%`;
     
@@ -40,7 +40,7 @@ export async function getCurrentWheater(currentCity,APIkey,fun_bg,fun_LocalCity 
     $city.innerHTML = `${jsonWheater.name}`;
     $humidity.innerHTML = `${jsonWheater.main.humidity}%`
     $imgCurrentWheater.forEach(img => img.src = `https://openweathermap.org/img/wn/${jsonWheater.weather[0].icon}@2x.png`);
-    $wind.innerHTML = `${jsonWheater.wind.speed}m/s`;
+    $wind.innerHTML = `${Math.floor(jsonWheater.wind.speed * 3.6)}km/h`;
     $wheaterLike.innerHTML = `${Math.floor(jsonWheater.main.feels_like)}°`;
     $clouds.innerHTML = `${jsonWheater.clouds.all}%`;
     
