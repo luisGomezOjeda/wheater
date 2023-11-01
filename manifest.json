@@ -11,7 +11,28 @@
     "lang": "es-MX",
     "icons": [
       {
-        "src": "./assets/images/icons8-verano-48.png",
+        "src": "./assets/images/icons8-sol-480.png",
+        "sizes": "480x480",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/images/icons8-sol-240.png",
+        "sizes": "240x240",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/images/icons8-sol-144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/images/icons8-sol-96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/images/icons8-sol-48.png",
+        "sizes": "48x48",
         "type": "image/png"
       }
     ]
